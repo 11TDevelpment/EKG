@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Teko:700|Unica+One');
+
+/* input[type=range] EKG/Control */
+input[type=range] {
+	-webkit-appearance: none;
+	margin: 10px 0;
+	width: 100%;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 12.8px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	background: #89A6A2;
+	border-radius: 15px;
+	border: 0px solid #000101;
+}
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	border: 0px solid #000000;
+	height: 20px;
+	width: 39px;
+	border-radius: 2px;
+	background: #2F4F5B;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -3.6px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #89A6A2;
+}
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 12.8px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	background: #89A6A2;
+	border-radius: 15px;
+	border: 0px solid #000101;
+}
+input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	border: 0px solid #000000;
+	height: 20px;
+	width: 39px;
+	border-radius: 2px;
+	background: #2F4F5B;
+	cursor: pointer;
+}
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 12.8px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: transparent;
+	border-color: transparent;
+	border-width: 39px 0;
+	color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+	background: #89A6A2;
+	border: 0px solid #000101;
+	border-radius: 50px;
+	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+	background: #89A6A2;
+	border: 0px solid #000101;
+	border-radius: 50px;
+	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+	border: 0px solid #000000;
+	height: 20px;
+	width: 39px;
+	border-radius: 2px;
+	background: #2F4F5B;
+	cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+	background: #89A6A2;
+}
+input[type=range]:focus::-ms-fill-upper {
+	background: #89A6A2;
+}
+
+/* Range Container EKG/Control */
+.range_container{
+	width: 300px;
+	margin: 10px auto 20px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+.range_container .title{
+	font-size: 30px;
+	font-weight: 500px;
+}
+.range_container .value{
+	font-size: 32px;
+	font-weight: 700;
+}
+.range_input_container {
+	margin: 10px auto;
+	padding: 10px 0px;
+}
+.range_input_container .range_input {
+	background-color: #ffffff;
+	margin: 0 auto;
+	display: block;
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 20px 10px;
+}
+
+/* EKG Front End */
+html, body {
+	height:100%; 
+	margin:0; 
+	padding:0 
+}
+#up_graph, 
+#down_graph{
+	position:fixed; 
+	width:75%; 
+	height:50% 
+}
+#up_data,
+#down_data {
+	position:fixed; 
+	width:25%; 
+	height:50% 
+}
+
+#up_graph { 
+	top:0;   
+	left:0;   
+	background:rgba(0,0,0,1);  
+}
+#up_data { 
+	top:0;   
+	left:75%; 
+	background:rgba(0,0,0,0.96);    
+}
+#down_graph { 
+	top:50%; 
+	left:0;   
+	background:rgba(0,0,0,1);   
+}
+#down_data { 
+	top:50%; 
+	left:75%; 
+	background:rgba(0,0,0,0.96);     
+}
+.data_cont{
+	display: table;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+.data_cont_inner{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+#viewer #c1, 
+#viewer #c2{
+	font-family: 'Teko', sans-serif;
+	color: white;
+	line-height: 140px;
+	font-size: 180px;
+	font-weight: 700;
+	text-align: center;
+}
+.title{
+	font-family: 'Unica One', cursive;
+	color: white;
+	font-size: 56px;
+	font-weight: 500;
+	text-align: center;
+}
+.title small{
+	color: white;
+	font-size: 30px;
+	font-style: italic;
+}
+.title i{
+	color: white;
+	font-size: 24px;
+}
+
+.fa-heart{
+    animation-name: heart;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes heart {
+	0% {transform: scale(1);}
+	15% {transform: scale(1.15);}
+	30% {transform: scale(1);}
+	45% {transform: scale(1.15);}
+	60% {transform: scale(1);} 
+}
